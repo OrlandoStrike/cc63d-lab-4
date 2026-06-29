@@ -11,13 +11,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Pruebas del corazon
-        run: pytest       
-        
       - name: Instalar requirements-dev
         run: pip install -r requirements-dev.txt  
 
-             
+      - name: Pruebas del corazon
+        run: pytest                    
 
       - name: estilo y errores estaticos
         run: ruff check . 
